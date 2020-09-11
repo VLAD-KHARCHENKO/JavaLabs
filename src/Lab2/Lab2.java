@@ -50,20 +50,21 @@ public class Lab2 {
         float max = (float) (5.0 + 1.2 * 21.0);
         float step = (float) (0.5 + 21.0 / 20.0);
         float x;
-//        System.out.println(min);
-//        System.out.println(max);
-//        System.out.println(step);
+        System.out.println(min);
+        System.out.println(max);
+        System.out.println(step);
 
         System.out.println("Цикл for:");
 
         for (x = min; x <= max; x = x + step) {
-
+            System.out.println("x= "+x);
             met(z, e, a, x);
         }
         System.out.println();
         System.out.println("Цикл while:");
         x = min;
         while (x <= max) {
+            System.out.println("x= "+x);
             met(z, e, a, x);
             x = x + step;
         }

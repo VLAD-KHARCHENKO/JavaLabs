@@ -29,7 +29,7 @@ public class Lab3 {public static void main(String[] args) throws IOException {
 
     for (x = min; x <= max; x = x + step) {
       //  System.out.println("min= "+x);
-        if(x<=0) {
+        if(x<0) {
             System.out.println("Недопустиме значення");
         }
         else{
