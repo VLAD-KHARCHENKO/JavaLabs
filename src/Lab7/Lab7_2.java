@@ -1,14 +1,16 @@
 package Lab7;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Lab7_2 {
-    public static void main(String[] args) throws FileNotFoundException {
-           int[][] array = new int[5][4];
-        File input =new File("input.txt");
+    public static void main(String[] args) throws IOException {
+        int[][] array = new int[5][4];
+        File input = new File("input.txt");
+        File output = new File("output.txt");
+        FileWriter writer;
+        writer = new FileWriter(output);
+
         Scanner scanner = new Scanner(input);
         int b;
         int min = 0;
@@ -21,7 +23,6 @@ public class Lab7_2 {
             }
 
         }
-
 
 
         System.out.println("Двовимірний масив:");
@@ -49,6 +50,15 @@ public class Lab7_2 {
         }
         System.out.println("\nМінімальний елемент другого рядка: " + array[1][min]);
 
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 4; j++) {
+                writer.write(" " + array[i][j]);
+
+            }
+            //writer.write("\n ");
+        }
+        writer.close();
+
 
     }
 
@@ -62,4 +72,5 @@ public class Lab7_2 {
             System.out.println();
         }
     }
+
 }
