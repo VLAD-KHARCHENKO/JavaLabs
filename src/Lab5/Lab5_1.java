@@ -13,14 +13,15 @@ public class Lab5_1 {
             array[i] = (float) ((-7) + Math.random() * 19.5);
             System.out.println(array[i]);
         }
-        for (int i = 0; i < array.length; i++)
+        for (int i = 0; i < array.length; i++){
             if (array[i] > 0 && array[i] <= 5) {
                 arrayList.add(array[i]);
 
-            }
+
+            }}
         //підрахунок суми елдемапентів в проміжку
         for (float i : arrayList) {
-            a = a + i;
+               a = a + i;
 
         }
 
